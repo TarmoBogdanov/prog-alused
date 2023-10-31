@@ -1,0 +1,30 @@
+"""Function examples."""
+
+
+def func():
+    """Print the message 'I'm inside the function' to the console."""
+    print("I´m inside the function")
+
+
+func()
+
+
+def my_name_is(name):
+    """Prindib nimega seotud sõnumi "My name is [name]" konsoolile."""
+    def sisemus():
+        print(f"My name is {name}")
+
+    return sisemus
+
+
+minu_nimi_on_mari = my_name_is("Mari")
+minu_nimi_on_mari()
+
+
+# sum_six(num)`
+
+
+# sum_numbers()
+
+
+# usd_to_eur()
