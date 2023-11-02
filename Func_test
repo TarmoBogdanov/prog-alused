@@ -2,7 +2,7 @@
 
 
 def func():
-    """Print the message 'I'm inside the function' to the console."""
+    """Print 'I'm inside the function'."""
     print("I´m inside the function")
 
 
@@ -10,21 +10,34 @@ func()
 
 
 def my_name_is(name):
-    """Prindib nimega seotud sõnumi "My name is [name]" konsoolile."""
+    """Print a message with the given name."""
     def sisemus():
         print(f"My name is {name}")
 
-    return sisemus
+    sisemus()
 
 
-minu_nimi_on_mari = my_name_is("Mari")
-minu_nimi_on_mari()
+def test_my_name_is():
+    """This function checks if my_name_is returns None when called."""
+    result = my_name_is("Mari")
+    assert result is None, "Function should return None (you can omit the return statement)"
 
 
-# sum_six(num)`
+test_my_name_is()
 
 
-# sum_numbers()
+def sum_six(num):
+    """Add 6 to the given number and return the result."""
+    return num + 6
 
 
-# usd_to_eur()
+def sum_numbers(a, b):
+    """Add two numbers together and return the result."""
+    return a + b
+
+
+def usd_to_eur(amount_usd):
+    """Convert a money amount from US dollars to euros using the provided exchange rate."""
+    exchange_rate = 0.8  # Exchange rate: 1 USD = 0.8 EUR
+    amount_eur = amount_usd * exchange_rate
+    return amount_eur
