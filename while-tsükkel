@@ -1,0 +1,65 @@
+"""While loop exercises."""
+import random
+
+
+def make_hola_string(count: int) -> str:
+    """
+    Make hola string.
+
+    print(make_hola_string(3)) => "holaholahola"
+    print(make_hola_string(0)) => ""
+    """
+    return "hola" * count
+
+
+print(make_hola_string(3))
+print(make_hola_string(0))
+
+
+def generate_string_with_random_length(threshold: float) -> str:
+    """
+    Generate a string of "-" until random numbers is below threshold.
+
+    Use random.random() to generate a random float.
+    If the random number is below threshold, add "-" to result.
+    If the random number is greater or equal to the threshold, finish the loop.
+
+    generate_string_with_random_length(0.9) => "-----" (result can vary)
+    generate_string_with_random_length(0.5) => "-" (usually empty or 1 minus)
+    """
+    result = ""
+
+    while random.random() < threshold:
+        result += "-"
+
+    return result
+
+
+def ask_user_age(age_limit):
+    """
+    Ask the user for their age and validate it.
+
+    The age is considered valid if:
+    - it is numeric (answering "a" is not correct)
+    - it is greater or equal to the age_limit
+    - it is less or equal to 100
+
+    Warnings are printed out for:
+    - non-numeric input: Wrong input!
+    - age < age_limit: Too young!
+    - age > 100: Too old!
+
+    :param age_limit: Minimum valid age.
+    :return: The valid age as an integer.
+    """
+    while True:
+        try:
+            age = int(input("What is your age? "))
+            if age < age_limit:
+                print("Too young!")
+            elif age > 100:
+                print("Too old!")
+            else:
+                return age
+        except ValueError:
+            print("Wrong input!")
