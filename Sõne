@@ -1,0 +1,21 @@
+first_name = "James"
+last_name = "Bond"
+
+full_name = first_name + " " + last_name
+
+self_description_sentence = f"My name is {last_name}, {first_name} {last_name}."
+
+
+cake = "vahukoor\nmarjad\ntäidis\npõhi\n"
+
+# Print layers from top to bottom using one print() function
+print(cake[:8], cake[9:15], cake[16:22], cake[23:27], sep="\n")
+
+
+original_string = "Programming is fun!"
+
+backwards = original_string[::-1]
+
+every_other = original_string[::2]
+
+first_word_reversed = original_string.split()[0][::-1]
